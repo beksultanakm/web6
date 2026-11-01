@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Part 5</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    .section-title { background: #333; color: white; padding: 10px; cursor: pointer; margin-top: 5px; }
+    .section-content { background: #eee; padding: 10px; display: none; }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html">Part 1: Setup &amp; Selectors</a>
+  <a href="part2.html">Part 2: Effects</a>
+  <a href="part3.html">Part 3: DOM</a>
+  <a href="part4.html">Part 4: Animations</a>
+  <a href="part5.html">Part 5: Mini Project</a>
+</nav>
+<div class="container">
+  <div class="task">
+    <h2>Task 11. Accordion Menu</h2>
+
+    <div class="section-title">Section 1: What is jQuery?</div>
+    <div class="section-content">jQuery is a JavaScript library that makes DOM work easier.</div>
+
+    <div class="section-title">Section 2: Effects</div>
+    <div class="section-content">hide(), show(), fadeIn(), fadeOut(), slideUp(), slideDown().</div>
+
+    <div class="section-title">Section 3: Animations</div>
+    <div class="section-content">The animate() method changes CSS properties smoothly.</div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $(".section-title").click(function () {
+      // close all other sections
+      $(".section-content").not($(this).next()).slideUp();
+      // open or close the clicked section
+      $(this).next().slideToggle();
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Part 4</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<nav>
+  <a href="index.html">Part 1: Setup &amp; Selectors</a>
+  <a href="part2.html">Part 2: Effects</a>
+  <a href="part3.html">Part 3: DOM</a>
+  <a href="part4.html">Part 4: Animations</a>
+  <a href="part5.html">Part 5: Mini Project</a>
+</nav>
+<div class="container">
+
+  <div class="task">
+    <h2>Task 8. Basic Animation</h2>
+    <button id="btn8">Start</button>
+    <div class="box" id="box8"></div>
+  </div>
+
+  <div class="task" style="height: 250px;">
+    <h2>Task 9. Sequential Animations</h2>
+    <button id="btn9">Start</button>
+    <div class="box" id="box9"></div>
+  </div>
+
+  <div class="task" style="height: 200px;">
+    <h2>Task 10. Combined Animation</h2>
+    <button id="btn10">Start</button>
+    <div class="box" id="box10"></div>
+  </div>
+
+</div>
+
+<script>
+  $(document).ready(function () {
+    // Task 8: bigger size + new position
+    $("#btn8").click(function () {
+      $("#box8").animate({ width: "100px", height: "100px", left: "200px" });
+    });
+
+    // Task 9: animations run one after another (queue)
+    $("#btn9").click(function () {
+      $("#box9")
+        .animate({ left: "200px" })                 // move right
+        .animate({ top: "100px" })                  // move down
+        .animate({ width: "25px", height: "25px" }) // shrink
+        .animate({ left: "0px", top: "0px", width: "50px", height: "50px" }); // return
+    });
+
+    // Task 10: opacity + size + movement in ONE animate()
+    $("#btn10").click(function () {
+      $("#box10").animate({
+        opacity: 0.3,
+        width: "120px",
+        height: "120px",
+        left: "250px"
+      }, 1500);
+    });
+  });
+</script>
+</body>
+</html>

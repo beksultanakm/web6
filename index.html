@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Part 1</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<nav>
+  <a href="index.html">Part 1: Setup &amp; Selectors</a>
+  <a href="part2.html">Part 2: Effects</a>
+  <a href="part3.html">Part 3: DOM</a>
+  <a href="part4.html">Part 4: Animations</a>
+  <a href="part5.html">Part 5: Mini Project</a>
+</nav>
+<div class="container">
+
+  <div class="task">
+    <h2>Task 0. Setup</h2>
+    <p>Open the console (F12) and you will see "jQuery is ready!"</p>
+  </div>
+
+  <div class="task">
+    <h2>Task 1. Selectors &amp; CSS</h2>
+    <p id="myId">Paragraph with ID</p>
+    <p class="myClass">Paragraph with class</p>
+    <span>This is a span tag</span>
+  </div>
+
+</div>
+
+<script>
+  // Task 0: code runs only after the page is loaded
+  $(document).ready(function () {
+    console.log("jQuery is ready!");
+
+    // Task 1: select by ID, class and tag
+    $("#myId").text("Text changed by ID selector");          // .text()
+    $(".myClass").html("<b>Bold HTML by class selector</b>"); // .html()
+    $("span").text("Changed by tag selector");
+
+    // .css() changes styles
+    $("#myId").css("color", "red");
+    $(".myClass").css("background-color", "yellow");
+    $("span").css({ "font-size": "20px", "color": "blue" });
+  });
+</script>
+</body>
+</html>

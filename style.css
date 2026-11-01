@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+nav { background: #333; padding: 10px; }
+nav a { color: white; margin-right: 15px; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.container { padding: 20px; }
+.task { background: white; padding: 15px; margin-bottom: 20px; border-radius: 6px; }
+button { padding: 6px 12px; margin: 5px 5px 5px 0; cursor: pointer; }
+img { width: 200px; }
+.panel { background: #cde; padding: 10px; display: none; }
+.box { width: 50px; height: 50px; background: tomato; position: relative; }
